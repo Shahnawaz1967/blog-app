@@ -1,0 +1,14 @@
+{
+  "name": "mern-blog-platform",
+  "version": "1.0.0",
+  "description": "Full-stack blog platform with MERN stack",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-deps": "cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
