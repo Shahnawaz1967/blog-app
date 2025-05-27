@@ -1,6 +1,6 @@
 # MERN Blog Platform
 
-A full-stack blog platform built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring role-based access control, markdown support, and modern UI design.
+This is a full-stack blog application built using the MERN stack (MongoDB, Express.js, React, Node.js). Users can register, log in, create blog posts, and manage them by editing or deleting. They can also like and comment on posts. The app uses JWT for secure authentication and Tailwind CSS for a clean, responsive design. The frontend is deployed on Netlify, and the backend is hosted on Render, providing a smooth and user-friendly blogging experience..
 
 ## Features
 
