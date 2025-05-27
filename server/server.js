@@ -25,7 +25,7 @@ app.use("/api/blogs", blogRoutes)
 app.use("/api/users", userRoutes)
 
 // Health check endpoint
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({ message: "MERN Blog API is running!" })
 })
 
