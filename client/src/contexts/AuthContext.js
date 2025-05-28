@@ -3,14 +3,13 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import axios from "axios"
 
-// ✅ 1. Fixed: Use only REACT_APP_API_URL (No NODE_ENV logic needed)
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000"
+const API_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_API_URL || "https://blog-app-vpi7.onrender.com/"
+    : "http://localhost:5000"
 
-// ✅ 2. Set axios base URL
 axios.defaults.baseURL = API_BASE_URL
-
-// ✅ 3. Optional: Enable credentials if using cookies (can skip if using JWT in headers)
-// axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true;
 
 const AuthContext = createContext()
 
