@@ -3,13 +3,12 @@
 import { createContext, useContext, useState, useEffect } from "react"
 import axios from "axios"
 
-const API_BASE_URL =
-  process.env.NODE_ENV === "production"
-    ? process.env.REACT_APP_API_URL || "https://blog-app-vpi7.onrender.com/"
-    : "http://localhost:5000"
+// Use environment variable for API base URL
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000"
 
+// Set axios defaults here, without trailing slash to avoid double slash issues
 axios.defaults.baseURL = API_BASE_URL
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = true
 
 const AuthContext = createContext()
 
